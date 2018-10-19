@@ -11,8 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     });
   
     Service.associate = function(models) {
-      // We're saying that a Service should belong to an Author
-      // A Service can't be created without an Author due to the foreign key constraint
+ 
       Service.belongsTo(models.CarMake, {
         foreignKey: {
           allowNull: false
